@@ -1,0 +1,11 @@
+i.icon {
+    font-size: 1.5em;
+}
+
+.container.main {
+    margin-top: 7.0em;
+}
+
+#delete_button {
+    display: inline;
+} 

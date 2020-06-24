@@ -18,3 +18,10 @@ RESTful blog app by colt steele.
  Update  |/dogs/:id      | PUT       | Update the dog.
  ___________________________________________________________
  Destroy | /dogs/:id     | DELETE    | Remove the dog    
+
+ ## Feeds Index.
+
+ * Setup the Feeds app.  
+ * Create the blog model.  
+ * Add index route and template. 
+ * Add simple nav bar.  

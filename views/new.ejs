@@ -1,0 +1,20 @@
+<%- include("partials/header") %>
+    <div class="ui main text container segment">
+        <div class="ui huge header">New Post</div>
+        <form class="ui form" action="/feeds" method='POST'>
+            <div class="field">
+                <label for="">Title</label>
+                <input type="text" name='feed[title]' placeholder='title'>
+            </div>
+            <div class="field">
+                <label for="">Image</label>
+                <input type="text" name='feed[image]' placeholder='image'>
+            </div>
+            <div class="field">
+                <label for="">Story</label>
+                <textarea name='feed[body]' placeholder='CONTENT..'></textarea>
+            </div>
+            <input type="submit" class="ui teal big basic button">
+        </form>
+    </div>
+<%- include("partials/footer") %>

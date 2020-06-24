@@ -1,0 +1,21 @@
+<%- include("partials/header") %>
+    <div class="ui main text container segment">
+        <div class="ui huge header"> <%= feed.title %></div>
+        <div class="ui top attached">
+            <div class="item">
+                <img class="ui centered rounded image big" src="<%= feed.image %>"> 
+                <div class="content">
+                    <span><%= feed.date.toDateString() %></span>
+                </div>
+                <div class="description">
+                    <p><%- feed.body %></p>
+                </div>
+                <a href="/feeds/<%= feed._id %>/edit" class= "ui yellow basic button">Edit</a>
+                <form id="delete_button" action="/feeds/<%=feed._id %>?_method=DELETE" method="POST">
+                    <button class="ui red basic button">DELETE</button>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+<%- include("partials/footer") %>

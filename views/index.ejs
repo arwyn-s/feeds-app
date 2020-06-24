@@ -1,0 +1,32 @@
+<%- include("partials/header") %>
+
+<div class="ui main text container">
+    <div class="ui huge header">RESTful feeds app</div>
+    <div class="ui top attached segment">
+        <div class="ui divided items">
+            <% feeds.forEach((feed) => { %>
+            <div class="item">
+                <div class="image">
+                    <img src="<%= feed.image %>">
+                </div>
+                <div class="content">
+                    <a class="header" href="/feeds/<%= feed._id %>"><%= feed.title %></a>
+                    <div class="meta">
+                        <span><%= feed.date.toDateString() %></span>
+                    </div>
+                    <div class="description">
+                        <p><%- feed.body.substring(0, 100) %>...</p>
+                    </div>
+                    <div class="extra">
+                        <a class="ui floated basic blue button" href="/feeds/<%= feed._id %>">Read More
+                        <i class="right chevron icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <%});%>
+        </div>
+    </div>
+</div>
+
+<%- include("partials/footer") %>
